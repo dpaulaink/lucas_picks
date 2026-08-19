@@ -1,0 +1,2 @@
+# lucas_picks
+loja
