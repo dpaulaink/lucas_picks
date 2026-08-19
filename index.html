@@ -1,536 +1,878 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Lucas Picks | Produtos que valem a pena</title>
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Lucas Picks | Produtos selecionados</title>
 
     <meta
         name="description"
-        content="Produtos selecionados, ofertas e recomendações para facilitar suas compras."
+        content="Produtos selecionados, ofertas e recomendações da Lucas Picks."
     >
 
     <link rel="stylesheet" href="style.css">
 </head>
 
+
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
 
-        <div class="container nav">
+<!-- ================= HEADER ================= -->
 
-            <a href="#" class="logo">
-                <span>LP</span>
-                Lucas Picks
+<header class="header">
+
+    <div class="container nav">
+
+        <a href="#inicio" class="logo">
+            <span>LP</span>
+            Lucas Picks
+        </a>
+
+        <nav>
+
+            <a href="#inicio">
+                Início
             </a>
 
-            <nav>
-                <a href="#inicio">Início</a>
-                <a href="#categorias">Categorias</a>
-                <a href="#ofertas">Ofertas</a>
-                <a href="#recomendados">Recomendados</a>
-            </nav>
+            <a href="#categorias">
+                Categorias
+            </a>
 
-            <button class="menu-btn" onclick="toggleMenu()">
-                ☰
-            </button>
+            <a href="#ofertas">
+                Ofertas
+            </a>
+
+            <a href="#recomendados">
+                Recomendados
+            </a>
+
+        </nav>
+
+        <button
+            class="menu-btn"
+            onclick="toggleMenu()"
+        >
+            ☰
+        </button>
+
+    </div>
+
+</header>
+
+
+
+<!-- ================= HERO ================= -->
+
+<main>
+
+<section
+    class="hero"
+    id="inicio"
+>
+
+    <div class="container hero-content">
+
+
+        <div class="hero-text">
+
+            <span class="badge">
+                ✦ Produtos selecionados
+            </span>
+
+            <h1>
+
+                Produtos bons,
+
+                <strong>
+                    sem perder tempo procurando.
+                </strong>
+
+            </h1>
+
+            <p>
+
+                Uma seleção de produtos interessantes,
+                úteis e com ótimo custo-benefício
+                encontrados na Amazon.
+
+            </p>
+
+
+            <div class="hero-buttons">
+
+                <a
+                    href="#ofertas"
+                    class="btn primary"
+                >
+                    🔥 Ver ofertas
+                </a>
+
+
+                <a
+                    href="#recomendados"
+                    class="btn secondary"
+                >
+                    Explorar produtos
+                </a>
+
+            </div>
 
         </div>
 
-    </header>
 
 
-    <!-- HERO -->
-    <main>
+        <div class="hero-card">
 
-        <section class="hero" id="inicio">
-
-            <div class="container hero-content">
-
-                <div class="hero-text">
-
-                    <span class="badge">
-                        ✦ Selecionados por Lucas
-                    </span>
-
-                    <h1>
-                        Produtos bons,
-                        <strong>sem perder tempo procurando.</strong>
-                    </h1>
-
-                    <p>
-                        Uma seleção de produtos interessantes,
-                        úteis e com ótimo custo-benefício encontrados
-                        na Amazon.
-                    </p>
-
-                    <div class="hero-buttons">
-
-                        <a href="#ofertas" class="btn primary">
-                            Ver ofertas
-                        </a>
-
-                        <a href="#recomendados" class="btn secondary">
-                            Explorar produtos
-                        </a>
-
-                    </div>
-
-                </div>
-
-                <div class="hero-card">
-
-                    <div class="hero-icon">
-                        🛒
-                    </div>
-
-                    <h3>
-                        Achadinhos da semana
-                    </h3>
-
-                    <p>
-                        Produtos que merecem entrar no radar.
-                    </p>
-
-                    <div class="hero-stars">
-                        ★★★★★
-                    </div>
-
-                </div>
-
+            <div class="hero-icon">
+                🛒
             </div>
 
-        </section>
+            <h3>
+                Achadinhos da semana
+            </h3>
 
+            <p>
+                Produtos selecionados para
+                facilitar sua compra.
+            </p>
 
-        <!-- CATEGORIAS -->
-        <section class="section" id="categorias">
-
-            <div class="container">
-
-                <div class="section-title">
-
-                    <span>EXPLORE</span>
-
-                    <h2>
-                        Encontre por categoria
-                    </h2>
-
-                </div>
-
-
-                <div class="categories">
-
-                    <button onclick="filterProducts('all')">
-                        🛍️
-                        <span>Todos</span>
-                    </button>
-
-                    <button onclick="filterProducts('tecnologia')">
-                        💻
-                        <span>Tecnologia</span>
-                    </button>
-
-                    <button onclick="filterProducts('casa')">
-                        🏠
-                        <span>Casa</span>
-                    </button>
-
-                    <button onclick="filterProducts('acessorios')">
-                        🎧
-                        <span>Acessórios</span>
-                    </button>
-
-                    <button onclick="filterProducts('escritorio')">
-                        ✏️
-                        <span>Escritório</span>
-                    </button>
-
-                </div>
-
+            <div class="hero-stars">
+                ★★★★★
             </div>
 
-        </section>
+        </div>
 
 
-        <!-- OFERTAS -->
-        <section class="section products-section" id="ofertas">
+    </div>
 
-            <div class="container">
+</section>
 
-                <div class="section-heading">
 
-                    <div>
 
-                        <span>🔥 EM DESTAQUE</span>
+<!-- ================= CATEGORIAS ================= -->
 
-                        <h2>
-                            Ofertas selecionadas
-                        </h2>
+<section
+    class="section"
+    id="categorias"
+>
 
-                    </div>
+    <div class="container">
 
-                    <div class="search">
 
-                        <input
-                            type="text"
-                            id="searchInput"
-                            placeholder="Pesquisar produto..."
-                            onkeyup="searchProducts()"
-                        >
+        <div class="section-title">
 
-                        🔎
+            <span>
+                EXPLORE
+            </span>
 
-                    </div>
+            <h2>
+                Encontre por categoria
+            </h2>
 
-                </div>
+        </div>
 
 
-                <div class="products" id="productGrid">
 
+        <div class="categories">
 
-                    <!-- PRODUTO 1 -->
 
-                    <article
-                        class="product"
-                        data-category="tecnologia"
-                        data-name="Fone Bluetooth"
-                    >
+            <button
+                onclick="filterProducts('all')"
+            >
 
-                        <div class="product-image">
-                            🎧
-                            <span class="discount">
-                                -20%
-                            </span>
-                        </div>
+                🛍️
 
-                        <div class="product-info">
+                <span>
+                    Todos
+                </span>
 
-                            <span class="category">
-                                Tecnologia
-                            </span>
+            </button>
 
-                            <h3>
-                                Fone Bluetooth Premium
-                            </h3>
 
-                            <div class="rating">
-                                ★★★★★
-                                <small>(128)</small>
-                            </div>
 
-                            <p class="description">
-                                Fone sem fio confortável para
-                                música, estudos e trabalho.
-                            </p>
+            <button
+                onclick="filterProducts('tecnologia')"
+            >
 
-                            <div class="price">
+                💻
 
-                                <small>
-                                    A partir de
-                                </small>
+                <span>
+                    Tecnologia
+                </span>
 
-                                <strong>
-                                    R$ 89,90
-                                </strong>
+            </button>
 
-                            </div>
 
-                            <a
-                                href="SEU-LINK-AFILIADO-AQUI"
-                                target="_blank"
-                                rel="nofollow sponsored"
-                                class="product-button"
-                            >
-                                Ver na Amazon →
-                            </a>
 
-                        </div>
+            <button
+                onclick="filterProducts('casa')"
+            >
 
-                    </article>
+                🏠
 
+                <span>
+                    Casa
+                </span>
 
-                    <!-- PRODUTO 2 -->
-
-                    <article
-                        class="product"
-                        data-category="escritorio"
-                        data-name="Teclado Mecânico"
-                    >
+            </button>
 
-                        <div class="product-image">
-                            ⌨️
-                            <span class="discount">
-                                -15%
-                            </span>
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="category">
-                                Escritório
-                            </span>
 
-                            <h3>
-                                Teclado Mecânico RGB
-                            </h3>
 
-                            <div class="rating">
-                                ★★★★★
-                                <small>(94)</small>
-                            </div>
+            <button
+                onclick="filterProducts('acessorios')"
+            >
 
-                            <p class="description">
-                                Teclado mecânico compacto para
-                                trabalho e jogos.
-                            </p>
+                🎧
 
-                            <div class="price">
+                <span>
+                    Acessórios
+                </span>
 
-                                <small>
-                                    A partir de
-                                </small>
+            </button>
 
-                                <strong>
-                                    R$ 149,90
-                                </strong>
 
-                            </div>
 
-                            <a
-                                href="SEU-LINK-AFILIADO-AQUI"
-                                target="_blank"
-                                rel="nofollow sponsored"
-                                class="product-button"
-                            >
-                                Ver na Amazon →
-                            </a>
+            <button
+                onclick="filterProducts('escritorio')"
+            >
 
-                        </div>
+                ✏️
 
-                    </article>
+                <span>
+                    Escritório
+                </span>
 
+            </button>
 
-                    <!-- PRODUTO 3 -->
 
-                    <article
-                        class="product"
-                        data-category="casa"
-                        data-name="Luminária LED"
-                    >
+        </div>
 
-                        <div class="product-image">
-                            💡
-                            <span class="discount">
-                                -30%
-                            </span>
-                        </div>
+    </div>
 
-                        <div class="product-info">
-
-                            <span class="category">
-                                Casa
-                            </span>
+</section>
 
-                            <h3>
-                                Luminária LED de Mesa
-                            </h3>
 
-                            <div class="rating">
-                                ★★★★★
-                                <small>(217)</small>
-                            </div>
 
-                            <p class="description">
-                                Iluminação moderna para estudos,
-                                trabalho e decoração.
-                            </p>
+<!-- ================= PRODUTOS ================= -->
 
-                            <div class="price">
+<section
+    class="section products-section"
+    id="ofertas"
+>
 
-                                <small>
-                                    A partir de
-                                </small>
+    <div class="container">
 
-                                <strong>
-                                    R$ 59,90
-                                </strong>
 
-                            </div>
-
-                            <a
-                                href="SEU-LINK-AFILIADO-AQUI"
-                                target="_blank"
-                                rel="nofollow sponsored"
-                                class="product-button"
-                            >
-                                Ver na Amazon →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-
-                    <!-- PRODUTO 4 -->
-
-                    <article
-                        class="product"
-                        data-category="acessorios"
-                        data-name="Suporte para celular"
-                    >
-
-                        <div class="product-image">
-                            📱
-                            <span class="discount">
-                                -18%
-                            </span>
-                        </div>
-
-                        <div class="product-info">
-
-                            <span class="category">
-                                Acessórios
-                            </span>
-
-                            <h3>
-                                Suporte Articulado para Celular
-                            </h3>
-
-                            <div class="rating">
-                                ★★★★★
-                                <small>(76)</small>
-                            </div>
-
-                            <p class="description">
-                                Suporte ajustável para mesa,
-                                vídeos e chamadas.
-                            </p>
-
-                            <div class="price">
-
-                                <small>
-                                    A partir de
-                                </small>
-
-                                <strong>
-                                    R$ 49,90
-                                </strong>
-
-                            </div>
-
-                            <a
-                                href="SEU-LINK-AFILIADO-AQUI"
-                                target="_blank"
-                                rel="nofollow sponsored"
-                                class="product-button"
-                            >
-                                Ver na Amazon →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- RECOMENDADOS -->
-
-        <section class="recommendation" id="recomendados">
-
-            <div class="container recommendation-content">
-
-                <div>
-
-                    <span>
-                        ⭐ MINHA SELEÇÃO
-                    </span>
-
-                    <h2>
-                        Produtos que eu realmente colocaria no carrinho.
-                    </h2>
-
-                    <p>
-                        A ideia aqui não é encher a página de links.
-                        É encontrar produtos interessantes e deixar
-                        tudo organizado em um só lugar.
-                    </p>
-
-                    <a
-                        href="#ofertas"
-                        class="btn primary"
-                    >
-                        Ver seleção
-                    </a>
-
-                </div>
-
-                <div class="recommendation-symbol">
-                    ★
-                </div>
-
-            </div>
-
-        </section>
-
-
-    </main>
-
-
-    <!-- FOOTER -->
-
-    <footer>
-
-        <div class="container footer-content">
+        <div class="section-heading">
 
             <div>
 
-                <a href="#" class="logo">
-                    <span>LP</span>
-                    Lucas Picks
-                </a>
+                <span>
+                    🔥 PRODUTOS
+                </span>
 
-                <p>
-                    Produtos, ofertas e recomendações.
-                </p>
+                <h2>
+                    Ofertas selecionadas
+                </h2>
 
             </div>
 
-            <div class="footer-links">
 
-                <a href="#inicio">
-                    Início
-                </a>
 
-                <a href="#categorias">
-                    Categorias
-                </a>
+            <div class="search">
 
-                <a href="#ofertas">
-                    Ofertas
-                </a>
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Pesquisar produto..."
+                    onkeyup="searchProducts()"
+                >
+
+                🔎
 
             </div>
 
         </div>
 
-        <div class="copyright">
 
-            © 2026 Lucas Picks — Todos os direitos reservados.
+
+        <div
+            class="products"
+            id="productGrid"
+        >
+
+
+
+<!-- ================================================= -->
+<!-- PRODUTO 1 — IPHONE 16 512 GB -->
+<!-- ================================================= -->
+
+<article
+    class="product"
+    data-category="tecnologia"
+    data-name="Apple iPhone 16 512 GB"
+>
+
+
+    <div class="product-image">
+
+        <img
+            src="imagens/iphone16.jpg"
+            alt="Apple iPhone 16 512 GB"
+        >
+
+        <span class="discount">
+            OFERTA
+        </span>
+
+    </div>
+
+
+
+    <div class="product-info">
+
+
+        <span class="category">
+            Tecnologia
+        </span>
+
+
+        <h3>
+            Apple iPhone 16 512 GB
+        </h3>
+
+
+        <div class="rating">
+
+            ★★★★★
+
+            <small>
+                Apple
+            </small>
 
         </div>
 
-    </footer>
+
+        <p class="description">
+
+            Apple iPhone 16 com
+            512 GB de armazenamento.
+
+        </p>
 
 
-    <script src="script.js"></script>
+        <div class="price">
+
+            <small>
+                Confira o preço atual
+            </small>
+
+            <strong>
+                Ver oferta
+            </strong>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.com.br/Apple-iPhone-16-512-GB/dp/B0DJFS7GXV?_encoding=UTF8&pd_rd_w=mjjEB&content-id=amzn1.sym.b8a777b1-8674-4e17-adb5-c2d4aa48a496&pf_rd_p=b8a777b1-8674-4e17-adb5-c2d4aa48a496&pf_rd_r=KBMER9M1ZS71G7CBCP6T&pd_rd_wg=txD5N&pd_rd_r=9ce15006-7516-4a28-951e-cee212c11f2e&th=1&linkCode=ll2&tag=shopcardlu-20&linkId=03e6d1c82f93e8faa3db8cb625ec06c4&ref_=as_li_ss_tl"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="product-button"
+        >
+            Ver na Amazon →
+        </a>
+
+
+    </div>
+
+</article>
+
+
+
+<!-- ================================================= -->
+<!-- PRODUTO 2 — ASIN B0FQHGM324 -->
+<!-- ================================================= -->
+
+<article
+    class="product"
+    data-category="tecnologia"
+    data-name="Produto Amazon B0FQHGM324"
+>
+
+
+    <div class="product-image">
+
+        <img
+            src="imagens/produto2.jpg"
+            alt="Produto Amazon"
+        >
+
+        <span class="discount">
+            OFERTA
+        </span>
+
+    </div>
+
+
+
+    <div class="product-info">
+
+
+        <span class="category">
+            Tecnologia
+        </span>
+
+
+        <h3>
+            Produto selecionado Amazon
+        </h3>
+
+
+        <div class="rating">
+            ★★★★★
+            <small>
+                Amazon
+            </small>
+        </div>
+
+
+        <p class="description">
+
+            Confira detalhes, preço e
+            disponibilidade diretamente na Amazon.
+
+        </p>
+
+
+        <div class="price">
+
+            <small>
+                Confira o preço atual
+            </small>
+
+            <strong>
+                Ver oferta
+            </strong>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.com.br/dp/B0FQHGM324?th=1&linkCode=ll2&tag=schroder08-20&linkId=9e4d168f496849098abbf3876b8f4f91&ref_=as_li_ss_tl"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="product-button"
+        >
+            Ver na Amazon →
+        </a>
+
+
+    </div>
+
+</article>
+
+
+
+<!-- ================================================= -->
+<!-- PRODUTO 3 — ASIN B09N6C0JM -->
+<!-- ================================================= -->
+
+<article
+    class="product"
+    data-category="tecnologia"
+    data-name="Produto Amazon B09N6C0JM"
+>
+
+
+    <div class="product-image">
+
+        <img
+            src="imagens/produto3.jpg"
+            alt="Produto Amazon"
+        >
+
+        <span class="discount">
+            OFERTA
+        </span>
+
+    </div>
+
+
+
+    <div class="product-info">
+
+
+        <span class="category">
+            Tecnologia
+        </span>
+
+
+        <h3>
+            Produto selecionado Amazon
+        </h3>
+
+
+        <div class="rating">
+
+            ★★★★★
+
+            <small>
+                Amazon
+            </small>
+
+        </div>
+
+
+        <p class="description">
+
+            Veja o produto, preço atual
+            e disponibilidade na Amazon.
+
+        </p>
+
+
+        <div class="price">
+
+            <small>
+                Confira o preço atual
+            </small>
+
+            <strong>
+                Ver oferta
+            </strong>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.com.br/dp/B09n6c0Jm"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="product-button"
+        >
+            Ver na Amazon →
+        </a>
+
+
+    </div>
+
+</article>
+
+
+
+<!-- ================================================= -->
+<!-- PRODUTO 4 — ASIN B0FQHRD3MD -->
+<!-- ================================================= -->
+
+<article
+    class="product"
+    data-category="tecnologia"
+    data-name="Produto Amazon B0FQHRD3MD"
+>
+
+
+    <div class="product-image">
+
+        <img
+            src="imagens/produto4.jpg"
+            alt="Produto Amazon"
+        >
+
+        <span class="discount">
+            OFERTA
+        </span>
+
+    </div>
+
+
+
+    <div class="product-info">
+
+
+        <span class="category">
+            Tecnologia
+        </span>
+
+
+        <h3>
+            Produto selecionado Amazon
+        </h3>
+
+
+        <div class="rating">
+
+            ★★★★★
+
+            <small>
+                Amazon
+            </small>
+
+        </div>
+
+
+        <p class="description">
+
+            Confira o preço atual,
+            avaliações e disponibilidade.
+
+        </p>
+
+
+        <div class="price">
+
+            <small>
+                Confira o preço atual
+            </small>
+
+            <strong>
+                Ver oferta
+            </strong>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.com.br/dp/B0FQHRD3MD?th=1&linkCode=ll2&tag=schroder08-20&linkId=1146af7adc181b2372fe3c0573ede20f&ref_=as_li_ss_tl"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="product-button"
+        >
+            Ver na Amazon →
+        </a>
+
+
+    </div>
+
+</article>
+
+
+
+<!-- ================================================= -->
+<!-- PRODUTO 5 — ASIN B0DXR6MKR8 -->
+<!-- ================================================= -->
+
+<article
+    class="product"
+    data-category="tecnologia"
+    data-name="Produto Amazon B0DXR6MKR8"
+>
+
+
+    <div class="product-image">
+
+        <img
+            src="imagens/produto5.jpg"
+            alt="Produto Amazon"
+        >
+
+        <span class="discount">
+            OFERTA
+        </span>
+
+    </div>
+
+
+
+    <div class="product-info">
+
+
+        <span class="category">
+            Tecnologia
+        </span>
+
+
+        <h3>
+            Produto selecionado Amazon
+        </h3>
+
+
+        <div class="rating">
+
+            ★★★★★
+
+            <small>
+                Amazon
+            </small>
+
+        </div>
+
+
+        <p class="description">
+
+            Produto selecionado.
+            Confira informações e preço atual na Amazon.
+
+        </p>
+
+
+        <div class="price">
+
+            <small>
+                Confira o preço atual
+            </small>
+
+            <strong>
+                Ver oferta
+            </strong>
+
+        </div>
+
+
+        <a
+            href="https://www.amazon.com.br/dp/B0DXR6MKR8?tag=schroder08-20"
+            target="_blank"
+            rel="nofollow sponsored"
+            class="product-button"
+        >
+            Ver na Amazon →
+        </a>
+
+
+    </div>
+
+</article>
+
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= RECOMENDADOS ================= -->
+
+<section
+    class="recommendation"
+    id="recomendados"
+>
+
+    <div class="container recommendation-content">
+
+
+        <div>
+
+            <span>
+                ⭐ MINHA SELEÇÃO
+            </span>
+
+
+            <h2>
+
+                Produtos que
+                merecem entrar
+                no seu radar.
+
+            </h2>
+
+
+            <p>
+
+                Selecionamos produtos encontrados
+                na Amazon para facilitar sua busca
+                e comparação.
+
+            </p>
+
+
+            <a
+                href="#ofertas"
+                class="btn primary"
+            >
+                Ver produtos
+            </a>
+
+        </div>
+
+
+        <div class="recommendation-symbol">
+            ★
+        </div>
+
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="container footer-content">
+
+
+        <div>
+
+            <a
+                href="#inicio"
+                class="logo"
+            >
+
+                <span>
+                    LP
+                </span>
+
+                Lucas Picks
+
+            </a>
+
+
+            <p>
+                Produtos, ofertas e recomendações.
+            </p>
+
+        </div>
+
+
+
+        <div class="footer-links">
+
+            <a href="#inicio">
+                Início
+            </a>
+
+            <a href="#categorias">
+                Categorias
+            </a>
+
+            <a href="#ofertas">
+                Ofertas
+            </a>
+
+        </div>
+
+
+    </div>
+
+
+
+    <div class="copyright">
+
+        © 2026 Lucas Picks — Todos os direitos reservados.
+
+    </div>
+
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
