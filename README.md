@@ -1,2 +1,2 @@
-# lucas_picks
+# Lucas Card achadinhos 
 loja
